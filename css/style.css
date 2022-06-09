@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(30, 28, 28);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-board {
+    width: 175px;
+    height: 175px;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    border-top: 2px solid red;
+    border-left: 2px solid red;
+    border-bottom: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotateRight 7s infinite cubic-bezier(0.2,-2,0.8,2);
+    transition: 1s;
+}
+
+.second-board {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    border-right: 2px solid red;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotateLeft 6s infinite cubic-bezier(0.2,-2,0.8,2);
+}
+
+.third-board {
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    border-top: 2px solid red;
+    border-left: 2px solid red;
+    border-bottom: 2px solid red;
+    animation: rotateRight 5s infinite cubic-bezier(0.2,-2,0.8,2);
+}
+
+@keyframes rotateRight {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateLeft {
+    to {
+        transform: rotate(-360deg);
+    }
+}
